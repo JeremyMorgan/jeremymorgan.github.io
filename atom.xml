@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Jeremy's Hacker Blog]]></title>
+  <link href="http://jeremymorgan.github.com/atom.xml" rel="self"/>
+  <link href="http://jeremymorgan.github.com/"/>
+  <updated>2012-10-18T17:06:00-07:00</updated>
+  <id>http://jeremymorgan.github.com/</id>
+  <author>
+    <name><![CDATA[Jeremy Morgan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://jeremymorgan.github.com/blog/Programming/hello-world/"/>
+    <updated>2012-10-18T17:03:00-07:00</updated>
+    <id>http://jeremymorgan.github.com/blog/Programming/hello-world</id>
+    <content type="html"><![CDATA[<p>This is my GitHub blog, and I&#8217;m not entirely sure what I&#8217;ll put here yet. It will more than likely be a few short musings on the state of the industry, or views on some new technology I find, or just the coolest links of that day.</p>
+
+<p>There likely won&#8217;t be any drawn out huge articles or tutorials as I&#8217;ll probably save those on JeremyMorgan.com.</p>
+
+<p>I will however be talking about Github projects, including some of my own. I hope to meet new people through this awesome service, and hope to teach and be taught as well.</p>
+]]></content>
+  </entry>
+  
+</feed>
