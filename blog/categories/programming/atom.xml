@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Programming | Jeremy's Hacker Blog]]></title>
-  <link href="http://jeremymorgan.github.com//blog/categories/programming/atom.xml" rel="self"/>
-  <link href="http://jeremymorgan.github.com//"/>
-  <updated>2012-11-25T16:53:32-08:00</updated>
-  <id>http://jeremymorgan.github.com//</id>
+  <link href="http://jeremymorgan.github.com/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://jeremymorgan.github.com/"/>
+  <updated>2012-11-25T17:04:43-08:00</updated>
+  <id>http://jeremymorgan.github.com/</id>
   <author>
     <name><![CDATA[Jeremy Morgan]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New SEO Tools Project]]></title>
-    <link href="http://jeremymorgan.github.com//blog/programming-projects/free-seo-tools/"/>
+    <link href="http://jeremymorgan.github.com/blog/programming-projects/free-seo-tools/"/>
     <updated>2012-11-14T16:19:00-08:00</updated>
-    <id>http://jeremymorgan.github.com//blog/programming-projects/new-seo-tools-project</id>
+    <id>http://jeremymorgan.github.com/blog/programming-projects/new-seo-tools-project</id>
     <content type="html"><![CDATA[<p>As you may or may not know I'm an SEO and often write about SEO and Marketing on my website. I decided to start working on a set of tools to put on my site, and I've open sourced them so others can use them and hopefully fork or improve upon.</p>
 
 <p>The repo <a href="https://github.com/JeremyMorgan/seotools">is located here</a> and I have a rough start going so far, you can also access the live demo <a href="http://seotools.ironfoundry.me"> on IronFoundry</a>. I hope to add some more cool stuff to this project in the future.</p>
@@ -45,9 +45,9 @@ backlink checker
   
   <entry>
     <title type="html"><![CDATA[Octopress Header Adder]]></title>
-    <link href="http://jeremymorgan.github.com//blog/programming-projects/octopress-header-adder/"/>
+    <link href="http://jeremymorgan.github.com/blog/programming-projects/octopress-header-adder/"/>
     <updated>2012-10-27T16:09:00-07:00</updated>
-    <id>http://jeremymorgan.github.com//blog/programming-projects/octopress-header-adder</id>
+    <id>http://jeremymorgan.github.com/blog/programming-projects/octopress-header-adder</id>
     <content type="html"><![CDATA[<p>I just created the <a href="https://github.com/JeremyMorgan/Octopress-Header-Adder">Octopress Header Adder</a> today.</p>
 
 <p>This is just a simple ruby script that adds some generic headers for Octopress. Let's say you have a bunch of files from Wordpress or another blog that you created from markup, you can use this utility to add header information to generate Octopress pages.</p>
@@ -70,9 +70,9 @@ backlink checker
   
   <entry>
     <title type="html"><![CDATA[PHP Ajax Dropdown Demo]]></title>
-    <link href="http://jeremymorgan.github.com//blog/programming-projects/php-ajax-dropdown-list/"/>
+    <link href="http://jeremymorgan.github.com/blog/programming-projects/php-ajax-dropdown-list/"/>
     <updated>2012-09-22T13:36:00-07:00</updated>
-    <id>http://jeremymorgan.github.com//blog/programming-projects/php-ajax-dropdown-demo</id>
+    <id>http://jeremymorgan.github.com/blog/programming-projects/php-ajax-dropdown-demo</id>
     <content type="html"><![CDATA[<p>I recently created a tutorial on my site for building a <a href="http://www.jeremymorgan.com/tutorials/php-tutorials/how-to-create-an-ajax-drop-down-menu-with-php-and-mysql/">PHP Ajax dropdown list</a> and detailed some of the steps required so people could get a good understanding of how AJAX works. Naturally these days most people would simply use jQuery or one of the tons of other quality frameworks for something so simple, but the purpose of this was to teach the basics and show you how AJAX works.</p>
 
 <p><img class="center" src="https://s3-us-west-1.amazonaws.com/jeremymorgan/hosted/php-mysql-ajax-tutorial.jpg" title="Custom PHP Ajax Drop Down List" ></p>

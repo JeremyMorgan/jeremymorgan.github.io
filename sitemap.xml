@@ -2,26 +2,26 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://jeremymorgan.github.com//blog/programming-projects/php-ajax-dropdown-list/
+            http://jeremymorgan.github.com/blog/programming-projects/php-ajax-dropdown-list/
         </loc>
         <lastmod>2012-11-25T16:31:49-08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://jeremymorgan.github.com//blog/programming-projects/octopress-header-adder/
+            http://jeremymorgan.github.com/blog/programming-projects/octopress-header-adder/
         </loc>
         <lastmod>2012-11-25T16:31:43-08:00</lastmod>
     </url>
     <url>
-        <loc>http://jeremymorgan.github.com//blog/programming-projects/free-seo-tools/</loc>
+        <loc>http://jeremymorgan.github.com/blog/programming-projects/free-seo-tools/</loc>
         <lastmod>2012-11-25T16:47:21-08:00</lastmod>
     </url>
     <url>
-        <loc>http://jeremymorgan.github.com//blog/archives/</loc>
+        <loc>http://jeremymorgan.github.com/blog/archives/</loc>
         <lastmod>2012-11-25T16:47:21-08:00</lastmod>
     </url>
     <url>
-        <loc>http://jeremymorgan.github.com//</loc>
+        <loc>http://jeremymorgan.github.com/</loc>
         <lastmod>2012-11-25T16:47:21-08:00</lastmod>
     </url>
 </urlset>
