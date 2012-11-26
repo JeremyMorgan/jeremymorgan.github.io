@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jeremy's Hacker Blog]]></title>
-  <link href="http://jeremymorgan.github.com//atom.xml" rel="self"/>
+  <title><![CDATA[Category: Programming | Jeremy's Hacker Blog]]></title>
+  <link href="http://jeremymorgan.github.com//blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://jeremymorgan.github.com//"/>
   <updated>2012-11-25T16:53:32-08:00</updated>
   <id>http://jeremymorgan.github.com//</id>
@@ -18,7 +18,7 @@
     <link href="http://jeremymorgan.github.com//blog/programming-projects/free-seo-tools/"/>
     <updated>2012-11-14T16:19:00-08:00</updated>
     <id>http://jeremymorgan.github.com//blog/programming-projects/new-seo-tools-project</id>
-    <content type="html"><![CDATA[<p>As you may or may not know I&#8217;m an SEO and often write about SEO and Marketing on my website. I decided to start working on a set of tools to put on my site, and I&#8217;ve open sourced them so others can use them and hopefully fork or improve upon.</p>
+    <content type="html"><![CDATA[<p>As you may or may not know I'm an SEO and often write about SEO and Marketing on my website. I decided to start working on a set of tools to put on my site, and I've open sourced them so others can use them and hopefully fork or improve upon.</p>
 
 <p>The repo <a href="https://github.com/JeremyMorgan/seotools">is located here</a> and I have a rough start going so far, you can also access the live demo <a href="http://seotools.ironfoundry.me"> on IronFoundry</a>. I hope to add some more cool stuff to this project in the future.</p>
 
@@ -50,20 +50,19 @@ backlink checker
     <id>http://jeremymorgan.github.com//blog/programming-projects/octopress-header-adder</id>
     <content type="html"><![CDATA[<p>I just created the <a href="https://github.com/JeremyMorgan/Octopress-Header-Adder">Octopress Header Adder</a> today.</p>
 
-<p>This is just a simple ruby script that adds some generic headers for Octopress. Let&#8217;s say you have a bunch of files from Wordpress or another blog that you created from markup, you can use this utility to add header information to generate Octopress pages.</p>
+<p>This is just a simple ruby script that adds some generic headers for Octopress. Let's say you have a bunch of files from Wordpress or another blog that you created from markup, you can use this utility to add header information to generate Octopress pages.</p>
 
-<p>It&#8217;s intended for those who convert all their html files to markup, it&#8217;s a convienent way to drop some headers into it.</p>
+<p>It's intended for those who convert all their html files to markup, it's a convienent way to drop some headers into it.</p>
 
 <p>To run it, simply type</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="n">headeradd</span><span class="o">.</span><span class="n">rb</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>In the folder with your markdown files. It will add a generic header to the beginning of all of them.</p>
 
-<p>I wrote this for someone who had emailed the Octopress mailing list about it, and figured I would share it here, if one person benefits from it then it&#8217;s worth the 10 minutes I put into it.</p>
+<p>I wrote this for someone who had emailed the Octopress mailing list about it, and figured I would share it here, if one person benefits from it then it's worth the 10 minutes I put into it.</p>
 
 <p>Feel free to branch or shoot me ideas for improving it.</p>
 ]]></content>
@@ -78,7 +77,7 @@ backlink checker
 
 <p><img class="center" src="https://s3-us-west-1.amazonaws.com/jeremymorgan/hosted/php-mysql-ajax-tutorial.jpg" title="Custom PHP Ajax Drop Down List" ></p>
 
-<p>You can <a href="https://github.com/JeremyMorgan/JM-AjaxDropDownDemo">get the source here</a> and if you fork it or make a more detailed tutorial let me know! I&#8217;d love to see what you&#8217;ve done. Please don&#8217;t use this on a production webserver as it is for demonstration and education only, it&#8217;s highly insecure and very basic.</p>
+<p>You can <a href="https://github.com/JeremyMorgan/JM-AjaxDropDownDemo">get the source here</a> and if you fork it or make a more detailed tutorial let me know! I'd love to see what you've done. Please don't use this on a production webserver as it is for demonstration and education only, it's highly insecure and very basic.</p>
 ]]></content>
   </entry>
   
