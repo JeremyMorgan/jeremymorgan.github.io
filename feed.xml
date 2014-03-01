@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jeremy Morgan</title>
+    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://localhost:8080</link>
+    <description>Jack of all trades, master of none.</description>
+    <pubDate>Fri, 28 Feb 2014 16:00:00 -0800</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:8080/articles/hello-world/</link>
+      <pubDate>Fri, 28 Feb 2014 16:00:00 -0800</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/hello-world/</guid>
+      <author></author>
+      <description>&lt;p&gt;Welcome to my GitHub page. I’m trying out  and figured this would be a good place to give it a test run. &lt;/p&gt;
+&lt;p&gt;I have no idea what I’ll put here but maybe someday I’ll put something useful here. &lt;/p&gt;
+&lt;p&gt;For now you can check out some of my lame repos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JeremyMorgan/ipcountrycode&quot;&gt;Ip to Country Code lookup service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JeremyMorgan/firecom&quot;&gt;FireCom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JeremyMorgan/staticpagetest&quot;&gt;Static Page Test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JeremyMorgan/AdSenseCalculator&quot;&gt;Angular AdSense Calulator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JeremyMorgan/rubywebcompress&quot;&gt;Ruby Web Compressor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ll try to put something more interesting up here. No promises. &lt;/p&gt;
+&lt;p&gt;So far I like &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; it’s really easy to work with, it uses a pretty forward thinking and smart design, plus I like the minimalist look and feel of the output. I’ll surely use it on some project soon. &lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
