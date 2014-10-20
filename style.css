@@ -1,0 +1,183 @@
+/* Thanks to gavin19 for compatibility help */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+background-image:url(http://p1.pichost.me/i/45/1684374.jpg);
+min-width:500px;
+background-size:cover;
+}
+
+.exit {
+color:#000;
+opacity:0;
+font-family:lucida console;
+-webkit-animation:ex 2s forwards;
+-webkit-animation-delay:2s;
+-moz-animation:ex 2s forwards;
+-moz-animation-delay:2s;
+-ms-animation:ex 2s forwards;
+-ms-animation-delay:2s;
+-o-animation:ex 2s forwards;
+-o-animation-delay:2s;
+animation:ex 2s forwards;
+animation-delay:2s;
+border:2px solid #000;
+position:absolute;
+left:50%;
+margin-left:300px;
+margin-top:-20px;
+border-radius:5px;
+}
+
+.window {
+border:2px solid #dbdbdb;
+border-radius:10px;
+background-color:#000;
+width:700px;
+height:0;
+border-top-width:20px;
+overflow:auto;
+-webkit-animation:clean 4s forwards;
+-moz-animation:clean 4s forwards;
+-ms-animation:clean 4s forwards;
+-o-animation:clean 4s forwards;
+animation:clean 4s forwards;
+margin:100px auto auto;
+}
+
+.title {
+color:#000;
+font-weight:700;
+font-family:Lucida Console;
+font-size:13px;
+text-align:center;
+position:absolute;
+left:50%;
+margin-left:-75px;
+margin-top:-15px;
+-webkit-animation:tit 2s;
+-moz-animation:tit 2s;
+-ms-animation:tit 2s;
+-o-animation:tit 2s;
+animation:tit 2s;
+}
+
+[class*="term"] {
+font-family:Ubuntu;
+font-size:20px;
+color:purple;
+line-height:30px;
+opacity:0;
+-webkit-animation:text 1s forwards;
+-moz-animation:text 1s forwards;
+-ms-animation:text 1s forwards;
+-o-animation:text 1s forwards;
+animation:text 1s forwards;
+}
+
+.term1 {
+-webkit-animation-delay:4s;
+-moz-animation-delay:4s;
+-ms-animation-delay:4s;
+-o-animation-delay:4s;
+animation-delay:4s;
+}
+
+.term2 {
+-webkit-animation-delay:6s;
+-moz-animation-delay:6s;
+-ms-animation-delay:6s;
+-o-animation-delay:6s;
+animation-delay:6s;
+}
+
+.term3 {
+margin-top:500px;
+-webkit-animation-delay:8s;
+-moz-animation-delay:8s;
+-ms-animation-delay:8s;
+-o-animation-delay:8s;
+animation-delay:8s;
+}
+
+::-webkit-scrollbar {
+width:6px;
+height:12px;
+background-color:#000;
+border-left:0 solid #d2d2d2;
+}
+
+.window::-webkit-scrollbar-thumb {
+background-color:#dbdbdb;
+border-top:5px solid #000;
+}
+
+::-webkit-scrollbar-corner {
+background-color:#000;
+color:#555;
+}
+@-webkit-keyframes text {
+    0%   { opacity: 0; }
+    100%  { opacity: 1; }
+}
+@-moz-keyframes text {
+    0%   { opacity: 0; }
+    100%  { opacity: 1; }
+}
+@-ms-keyframes text {
+    0%   { opacity: 0; }
+    100%  { opacity: 1; }
+}
+@-o-keyframes text {
+    0%   { opacity: 0; }
+    100%  { opacity: 1; }
+}
+@keyframes text {
+    0%   { opacity: 0; }
+    100%  { opacity: 1; }
+}
+@-webkit-keyframes clean {
+  0%   { margin-top: 900px;}
+    25%  { height: 0px; }
+    100% {height: 300px;}
+}
+@-moz-keyframes clean {
+    0%   { left: 900px; }
+    25%  { height: 0px; }
+    50% {margin-left: 320px;}
+    100% {height: 300px;}
+}
+@-o-keyframes clean {
+    0%   { margin-left: 900px; }
+    25%  { height: 0px; }
+    50% {margin-left: 320px;}
+    100% {height: 300px;}
+}
+@-ms-keyframes clean {
+    0%   { margin-left: 900px; }
+    25%  { height: 0px; }
+    50% {margin-left: 320px;}
+    100% {height: 300px;}
+}
+@keyframes clean {
+    0%   { margin-left: 900px; }
+    25%  { height: 0px; }
+    50% {margin-left: 320px;}
+    100% {height: 300px;}
+}
+@-webkit-keyframes ex {
+    100%   { opacity: 1; }
+}
+@-moz-keyframes ex {
+    100%   { opacity: 1; }
+
+}
+@-o-keyframes ex {
+    100%   { opacity: 1; }
+}
+@-ms-keyframes ex {
+    100%   { opacity: 1; }
+}
+@keyframes ex {
+    100%   { opacity: 1; }
+}
