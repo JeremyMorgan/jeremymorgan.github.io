@@ -5,8 +5,9 @@ from __future__ import unicode_literals
 AUTHOR = u'Jeremy Morgan'
 SITENAME = u"Jeremy's Github Blog"
 SITEURL = ''
-
-PATH = '/Users/jeremymorgan/repos/jeremymorgan.github.com/content'
+SITETITLE = u"Jeremy Morgan"
+GOOGLE_ANALYTICS = u"UA-55959736-1"
+PATH = '~/content'
 
 TIMEZONE = 'America/Los_Angeles'
 
@@ -20,16 +21,22 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-		 ('Python.org', 'http://python.org/'),
-		 ('Jinja2', 'http://jinja.pocoo.org/'),
-		 ('You can modify those links in your config file', '#'),)
+LINKS = (('GitHub', 'https://github.com/JeremyMorgan'),
+		 ('Twitter', 'https://twitter.com/JeremyCMorgan/'),
+		 ('LinkedIn', 'https://www.linkedin.com/in/jeremycmorgan'),
+		 ('Programming Blog', 'https://jeremymorgan.com'),)
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-		  ('Another social link', '#'),)
+PROJECTS = (('Angular Kickstart', 'https://github.com/JeremyMorgan/Angular-Kickstart'),
+		 ('Raspberry Pi Weather Station', 'https://github.com/JeremyMorgan/Raspberry_Pi_Weather_Station'),
+		 ('Raspberry Pi Temperature Monitoring', 'https://github.com/JeremyMorgan/Raspberry_Pi_Temperature'),
+		 ('ASP Self Hosted API', 'https://github.com/JeremyMorgan/ASP-Self-Hosted-API'),
+		 ('IP Country Code Lookup', 'https://github.com/JeremyMorgan/ipcountrycode'),
+		 ('Raspberry Pi Weather Station Web UI', 'https://github.com/JeremyMorgan/Raspberry_Pi_Weather_Station_WebUI'),
+		 )
 
 DEFAULT_PAGINATION = 10
+
+THEME = "/Users/jeremymorgan/repos/jeremymorgan.github.com/JeremyMorgan"
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
