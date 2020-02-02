@@ -1,8 +1,0 @@
-baseURL = "https://jeremymorgan.github.io"
-languageCode = "en-us"
-title = "Jeremy Morgan"
-theme = "hugo-dusk"
-
-[params]
-
-twitter = "JeremyCMorgan"
