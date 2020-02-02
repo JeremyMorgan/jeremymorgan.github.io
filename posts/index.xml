@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jeremy Morgan :: Tech Blog</title>
+    <link>https://jeremymorgan.github.io/posts/</link>
+    <description>Recent content in Posts on Jeremy Morgan :: Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Jeremy Morgan</copyright>
+    <lastBuildDate>Sun, 02 Feb 2020 10:14:25 -0800</lastBuildDate>
+    
+	<atom:link href="https://jeremymorgan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://jeremymorgan.github.io/posts/hello-world/</link>
+      <pubDate>Sun, 02 Feb 2020 10:14:25 -0800</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/posts/hello-world/</guid>
+      <description>Hello world Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non facilisis orci. Cras tristique dolor et accumsan efficitur. Maecenas iaculis auctor justo nec fermentum. Aliquam quis accumsan justo. Curabitur feugiat sodales magna et mattis. Curabitur gravida urna in imperdiet maximus. Phasellus efficitur laoreet sapien, quis condimentum nisi. Sed tristique volutpat quam tincidunt vehicula. Proin et lorem ligula. Sed sollicitudin odio leo, eget efficitur odio facilisis ac. Duis iaculis et justo sed efficitur.</description>
+    </item>
+    
+  </channel>
+</rss>
