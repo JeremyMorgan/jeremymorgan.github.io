@@ -6,9 +6,21 @@
     <description>Recent content on Jeremy Morgan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 02 Feb 2020 00:39:08 -0800</lastBuildDate>
     
 	<atom:link href="https://jeremymorgan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://jeremymorgan.github.io/posts/hello-world/</link>
+      <pubDate>Sun, 02 Feb 2020 00:39:08 -0800</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/posts/hello-world/</guid>
+      <description>Hello World This is my first post. I don&amp;rsquo;t even know what I&amp;rsquo;m going to do with this blog yet.
+My ideas:
+ Beginner Content Medium type personal opinions Getting Started in Tech Articles  I&amp;rsquo;ll decide which one at some point.</description>
+    </item>
     
   </channel>
 </rss>
