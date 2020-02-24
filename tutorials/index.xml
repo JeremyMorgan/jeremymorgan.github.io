@@ -18,8 +18,8 @@
       <pubDate>Sun, 02 Feb 2020 10:44:03 -0800</pubDate>
       
       <guid>https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/</guid>
-      <description>In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&amp;rsquo;ll use a React application, but with a few modifications, you can build just about anything with it.
-For this project, I&amp;rsquo;m using a Canakit Raspberry Pi 4 Complete Kit.</description>
+      <description>In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it.
+For this project, I&#39;m using a Canakit Raspberry Pi 4 Complete Kit.</description>
     </item>
     
   </channel>
