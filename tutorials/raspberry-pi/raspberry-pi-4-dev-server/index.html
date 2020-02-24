@@ -3,11 +3,11 @@
   <head>
     <title>Raspberry Pi 4 Dev Server // Jeremy Morgan :: Tech Blog</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.65.0-DEV" />
+    <meta name="generator" content="Hugo 0.62.2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Jeremy Morgan" />
     <meta name="description" content="In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it." />
-    <link rel="stylesheet" href="https://jeremymorgan.github.io/css/main.min.576881e38f90640557131c03ef7ef2d40091d835c298c6ba74795b3f28000236.css" />
+    <link rel="stylesheet" href="https://jeremymorgan.github.io/css/main.min.e5f072b03781541f80aa21c5c19466fbaaef8a8b4b47fd09f8f33e885089f2a8.css" />
 
     
     <meta name="twitter:card" content="summary_large_image"/>
@@ -88,11 +88,11 @@
         </div></div>
     </header>
     <div class="post-content">
-      <p>In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&rsquo;ll use a React application, but with a few modifications, you can build just about anything with it.</p>
-<p>For this project, I&rsquo;m using a <a href="http://bit.ly/CanakitRaspberryPi4">Canakit Raspberry Pi 4 Complete Kit</a>. This gives you everything you need to get going, including a case, power supply, and SD Card.</p>
+      <p>In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I'll use a React application, but with a few modifications, you can build just about anything with it.</p>
+<p>For this project, I'm using a <a href="http://bit.ly/CanakitRaspberryPi4">Canakit Raspberry Pi 4 Complete Kit</a>. This gives you everything you need to get going, including a case, power supply, and SD Card.</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-1.jpg" alt="Raspberry Pi 4 Development Server"></p>
 <h3 id="why-bother">Why Bother?</h3>
-<p>A solid development environment is important. You need a place where you can look at your application to make sure it&rsquo;s running fine. Many times folks do this on their local machine. It&rsquo;s better to test on a separate machine from what you&rsquo;re working on. This way, you can catch things like dependency and configuration changes.</p>
+<p>A solid development environment is important. You need a place where you can look at your application to make sure it's running fine. Many times folks do this on their local machine. It's better to test on a separate machine from what you're working on. This way, you can catch things like dependency and configuration changes.</p>
 <p>This development/testing server has the following advantages:</p>
 <ul>
 <li>A configuration and environment that matches production (if you have a Linux host)</li>
@@ -107,20 +107,20 @@
 <li>Push to development and test it out</li>
 <li>Approve changes, push it live</li>
 </ol>
-<p>This enables a great workflow where you can make changes and edits, commit, then push them and refresh your browser. You can then develop your code from any machine on the network that has git. Once you&rsquo;re satisfied with the changes, you can copy the artifacts to production. In fact, you can integrate production pushes into this workflow to make it all automatic.</p>
+<p>This enables a great workflow where you can make changes and edits, commit, then push them and refresh your browser. You can then develop your code from any machine on the network that has git. Once you're satisfied with the changes, you can copy the artifacts to production. In fact, you can integrate production pushes into this workflow to make it all automatic.</p>
 <h3 id="setting-up-the-pi-as-a-server">Setting up the Pi as a Server</h3>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-3.jpg" alt="Raspberry Pi 4 Development Server"></p>
-<p>For this project, I&rsquo;m using the full <a href="http://bit.ly/CanakitRaspberryPi4">Canakit Raspberry Pi kit</a>. It comes with everything you need. I won&rsquo;t go into setting this up in this article, but I should note that I&rsquo;m using the <a href="http://bit.ly/UbuntuRaspberryPi">Ubuntu Server image</a> for this project, and recommend you do the same.</p>
+<p>For this project, I'm using the full <a href="http://bit.ly/CanakitRaspberryPi4">Canakit Raspberry Pi kit</a>. It comes with everything you need. I won't go into setting this up in this article, but I should note that I'm using the <a href="http://bit.ly/UbuntuRaspberryPi">Ubuntu Server image</a> for this project, and recommend you do the same.</p>
 <p>I used my <a href="https://twitter.com/JeremyCMorgan/status/1216767569299853312">Pinebook pro</a> to burn the image to a card, but you can do this in Windows or with a Mac if you need to.</p>
-<p><a href="http://bit.ly/SetupPi54">Here&rsquo;s a good guide</a> for setting up one of these kits.</p>
-<p>We will set this up as a development/test server and use GIT to communicate with it. So here is what we&rsquo;ll do:</p>
+<p><a href="http://bit.ly/SetupPi54">Here's a good guide</a> for setting up one of these kits.</p>
+<p>We will set this up as a development/test server and use GIT to communicate with it. So here is what we'll do:</p>
 <ul>
 <li>Set up Git for Publishing</li>
 <li>Install Nginx</li>
 <li>Install NPM</li>
 <li>Create deployment from a repo on your machine to the Raspberry Pi web server in a single step.</li>
 </ul>
-<p>When we&rsquo;re done, we can change our React application and push the changes to the Pi to view them as a web page.</p>
+<p>When we're done, we can change our React application and push the changes to the Pi to view them as a web page.</p>
 <h3 id="1-set-up-git-for-publishing">1. Set up Git for Publishing</h3>
 <p><strong>Location: On Raspberry Pi</strong></p>
 <p>First we need to install Git.</p>
@@ -129,7 +129,7 @@
 <pre><code>which git-shell
 </code></pre><p>and we will add that output to /etc/shells</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-4.jpg" alt="Raspberry Pi 4 Development Server"></p>
-<p>Now we want to set up a git user that doesn&rsquo;t have the cool permissions that your account does.</p>
+<p>Now we want to set up a git user that doesn't have the cool permissions that your account does.</p>
 <pre><code>sudo adduser --disabled-password git
 </code></pre><p>Switch to the git user</p>
 <pre><code>sudo su git
@@ -137,31 +137,31 @@
 <pre><code>cd ~
 </code></pre><p>Make a directory for ssh files</p>
 <pre><code>mkdir ~/.ssh &amp;&amp; chmod 700 ~/.ssh
-</code></pre><p>We&rsquo;ll create our authorized_keys file</p>
+</code></pre><p>We'll create our authorized_keys file</p>
 <pre><code>touch ~/.ssh/authorized_keys &amp;&amp; chmod 600 ~/.ssh/authorized_keys
-</code></pre><p>Now you can add the public keys of any machine you&rsquo;d like to access the server by adding them to:</p>
+</code></pre><p>Now you can add the public keys of any machine you'd like to access the server by adding them to:</p>
 <pre><code>/home/git/.ssh/authorized_keys
-</code></pre><p>Then we&rsquo;ll set the git users&rsquo; shell to git-shell</p>
+</code></pre><p>Then we'll set the git users&rsquo; shell to git-shell</p>
 <pre><code>sudo chsh git -s $(which git-shell)
-</code></pre><p>Create a folder for our www files that we&rsquo;ll be serving later:</p>
+</code></pre><p>Create a folder for our www files that we'll be serving later:</p>
 <pre><code>mkdir ~/www
 </code></pre><h3 id="2-create-our-project-folder">2. Create Our Project Folder</h3>
 <p><strong>Location: On Raspberry Pi</strong></p>
 <p>This is a remote repository set up so we can work on the project on any other machine, then push it to the Raspberry Pi.</p>
 <pre><code>cd ~
 mkdir /home/git/react-hello-world.git
-</code></pre><p>Now, let&rsquo;s initiate it:</p>
+</code></pre><p>Now, let's initiate it:</p>
 <pre><code>cd react-hello-world.git &amp;&amp; git init --bare
-</code></pre><p>Let&rsquo;s go back to our machine and test it out.</p>
+</code></pre><p>Let's go back to our machine and test it out.</p>
 <p>On your developer machine, type in:</p>
 <pre><code>git clone git@[your IP address]:react-hello-world . 
 </code></pre><p>You should be able to clone it your local machine.</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-5.jpg" alt="Raspberry Pi 4 Development Server"></p>
-<p>If this works, we&rsquo;ll go back to the Raspberry Pi.</p>
+<p>If this works, we'll go back to the Raspberry Pi.</p>
 <h3 id="3-install-nginx">3. Install Nginx</h3>
 <p><strong>Location: On Raspberry Pi</strong></p>
 <p>Next, we will install Nginx on our Raspberry pi and use it to serve web pages.</p>
-<p>In this tutorial, we will set it up for a single project, so we&rsquo;ll be using a single www directory. However, if you have multiple projects, you want to break them into folders.</p>
+<p>In this tutorial, we will set it up for a single project, so we'll be using a single www directory. However, if you have multiple projects, you want to break them into folders.</p>
 <pre><code>sudo apt install Nginx
 </code></pre><p>This will install Nginx.</p>
 <p>You may need to add a firewall exception to ufw. You can list the available profiles by typing in:</p>
@@ -183,25 +183,25 @@ mkdir /home/git/react-hello-world.git
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-8.jpg" alt="Raspberry Pi 4 Development Server"></p>
 <p>Then save the file and reload Nginx.</p>
 <pre><code>sudo systemctl reload Nginx
-</code></pre><p>Now you&rsquo;re serving files from the www folder instead of git. This is where we publish files after committing.</p>
+</code></pre><p>Now you're serving files from the www folder instead of git. This is where we publish files after committing.</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-9.jpg" alt="Raspberry Pi 4 Development Server"></p>
-<p>Let&rsquo;s go back to our developer machine.</p>
+<p>Let's go back to our developer machine.</p>
 <h3 id="5-set-up-our-react-project">5. Set up Our React Project</h3>
 <p><strong>Location: On Your Developer Machine</strong></p>
-<p>We will build a React project and deploy that to our Pi. So let&rsquo;s set that up.</p>
-<p>First, we&rsquo;ll remove the repo we cloned earlier.</p>
+<p>We will build a React project and deploy that to our Pi. So let's set that up.</p>
+<p>First, we'll remove the repo we cloned earlier.</p>
 <pre><code>rm -rf react-hello-world/
-</code></pre><p>And we&rsquo;ll use the React CLI to create an app with the same name.</p>
+</code></pre><p>And we'll use the React CLI to create an app with the same name.</p>
 <pre><code>npx create-react-app react-hello-world
 </code></pre><p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-10.jpg" alt="Raspberry Pi 4 Development Server"></p>
-<p>Now we&rsquo;ve created a basic React project. Next, initialize it as a git repository.</p>
+<p>Now we've created a basic React project. Next, initialize it as a git repository.</p>
 <pre><code>git init
-</code></pre><p>We&rsquo;ll add our existing files and commit them.</p>
+</code></pre><p>We'll add our existing files and commit them.</p>
 <pre><code>git add .
 git commit -m &quot;Our first commit&quot;
-</code></pre><p>We&rsquo;ll set the remote to our Raspberry Pi. We set this, so when we push it to remote, the files will go to our Raspberry Pi.</p>
+</code></pre><p>We'll set the remote to our Raspberry Pi. We set this, so when we push it to remote, the files will go to our Raspberry Pi.</p>
 <pre><code>git remote add origin git@[Your IP Address]:react-hello-world.git
-</code></pre><p>And we&rsquo;ll push it to the Raspberry Pi:</p>
+</code></pre><p>And we'll push it to the Raspberry Pi:</p>
 <pre><code>git push --set-upstream origin master
 </code></pre><p>If you go to the Pi, you will see the repository in your react-hello-world.git folder:</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-11.jpg" alt="Raspberry Pi 4 Development Server"></p>
@@ -212,7 +212,7 @@ git commit -m &quot;Our first commit&quot;
 <p>We now need to install Node and NPM on the Raspberry Pi to start.</p>
 <pre><code>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install nodejs
-</code></pre><p>You can verify they&rsquo;re installed by typing in:</p>
+</code></pre><p>You can verify they're installed by typing in:</p>
 <pre><code>node --version 
 npm --version
 </code></pre><p><!-- raw HTML omitted --></p>
@@ -220,7 +220,7 @@ npm --version
 <p>We now have Node up and running.</p>
 <h3 id="7-setup-react-to-build">7. Setup React to Build</h3>
 <p><strong>Location: On Raspberry Pi</strong></p>
-<p>Let&rsquo;s build our React App on the Raspberry Pi, just to test it out.</p>
+<p>Let's build our React App on the Raspberry Pi, just to test it out.</p>
 <p>Check out the repo locally:</p>
 <pre><code>cd ~ &amp;&amp; git clone react-hello-world.git/ test
 </code></pre><p>Then we will install react and react-scripts (-g makes it global)</p>
@@ -234,7 +234,7 @@ npm install react-scripts -g
 <h3 id="8-tying-it-all-together">8. Tying It All Together</h3>
 <p><strong>Location: On Raspberry Pi</strong></p>
 <p>Now we need to copy those files into our www folder. We want to do that automatically every time we push to the git repo.</p>
-<p>Make sure you&rsquo;re in your git remote folder on the Raspberry Pi(for me it&rsquo;s /home/git/react-hello-world.git/)</p>
+<p>Make sure you're in your git remote folder on the Raspberry Pi(for me it's /home/git/react-hello-world.git/)</p>
 <p>And create a new file:</p>
 <pre><code>vim hooks/post-receive
 </code></pre><p>Add in:</p>
@@ -253,23 +253,23 @@ cp -r /home/git/build/build/* /home/git/www
 <li>copies the artifacts to our www folder.</li>
 </ul>
 <p>There are a few different ways you can do this, but this is a simple way to build and push the application to the www folder.</p>
-<p>You could build the application locally and just commit/push artifacts. I am building it on the &ldquo;server&rdquo; (our Raspberry Pi). This is a better way to do it because you can match your Raspberry Pi to your production server and only push over source to be automatically built. You don&rsquo;t have to worry about a config change on your development machine that won&rsquo;t be on your production machine. This enforces some consistency.</p>
-<p>You can also run tests here if you&rsquo;d like.</p>
-<p>Once you&rsquo;re done adding in these changes, then mark the file as executable.</p>
+<p>You could build the application locally and just commit/push artifacts. I am building it on the &ldquo;server&rdquo; (our Raspberry Pi). This is a better way to do it because you can match your Raspberry Pi to your production server and only push over source to be automatically built. You don't have to worry about a config change on your development machine that won't be on your production machine. This enforces some consistency.</p>
+<p>You can also run tests here if you'd like.</p>
+<p>Once you're done adding in these changes, then mark the file as executable.</p>
 <pre><code>chmod +x hooks/post-receive
 </code></pre><h3 id="9-testing-your-integration">9. Testing Your Integration</h3>
 <p><strong>Location: Your local machine and the Raspberry Pi</strong></p>
-<p>Now it&rsquo;s time to test it all. In your React app, open up App.js and make some kind of change.</p>
+<p>Now it's time to test it all. In your React app, open up App.js and make some kind of change.</p>
 <p>Add it and commit it.</p>
 <pre><code>git add .
 git commit &quot;small change&quot;
 git push origin master
 </code></pre><p>You will see output from your remote:</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-14.jpg" alt="Raspberry Pi 4 Development Server"></p>
-<p>Now you&rsquo;re ready to test it in a web browser!!!</p>
-<p>Here&rsquo;s what we&rsquo;ve been waiting for!</p>
+<p>Now you're ready to test it in a web browser!!!</p>
+<p>Here's what we've been waiting for!</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-15.jpg" alt="Raspberry Pi 4 Development Server"></p>
-<p>There&rsquo;s my React site in all its glory.</p>
+<p>There's my React site in all its glory.</p>
 <p>Now, I can update this application by:</p>
 <ul>
 <li>Making changes</li>
@@ -279,10 +279,10 @@ git push origin master
 <p>All in a matter of seconds, I can see the results of my changes. Easy and simple. You could easily extend this, so you push it to here, do a spot check then push it to a staging or production server. The possibilities are endless.</p>
 <h3 id="10-start-developing">10. Start Developing!</h3>
 <p>I created this tutorial with a React app as an example, but it could just as easily be Angular, Vue, Golang, Python, PHP, or whatever. The concepts are the same. I hope this will speed up your workflow and give you a nice place to spot check and test your application before pushing it live.</p>
-<p>It&rsquo;s not exactly an enterprise solution, but it&rsquo;s a cheap alternative to an actual server.</p>
-<p>Here&rsquo;s how I have it setup:</p>
+<p>It's not exactly an enterprise solution, but it's a cheap alternative to an actual server.</p>
+<p>Here's how I have it setup:</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-16.jpg" alt="Raspberry Pi 4 Development Server"></p>
-<p>I used my <a href="https://www.jeremymorgan.com/blog/linux/pine64-pro-laptop-review/">Pinebook Pro</a> as a development machine for this article. What you&rsquo;re looking at here is a fully capable development setup for ~$300. I could easily develop tons of apps and push them to production with this setup. Thanks to ARM processors and the tireless work of innovators such as the <a href="http://bit.ly/PiFoundation">Raspberry Pi Foundation</a> and the <a href="http://bit.ly/Pine64Project">Pine64 Project</a>.</p>
+<p>I used my <a href="https://www.jeremymorgan.com/blog/linux/pine64-pro-laptop-review/">Pinebook Pro</a> as a development machine for this article. What you're looking at here is a fully capable development setup for ~$300. I could easily develop tons of apps and push them to production with this setup. Thanks to ARM processors and the tireless work of innovators such as the <a href="http://bit.ly/PiFoundation">Raspberry Pi Foundation</a> and the <a href="http://bit.ly/Pine64Project">Pine64 Project</a>.</p>
 <p>What do you think? <a href="http://bit.ly/JeremyCMorgan">Yell at me on Twitter</a> and let me know!</p>
 
     </div>
