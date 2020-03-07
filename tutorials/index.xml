@@ -22,5 +22,15 @@
 For this project, I&#39;m using a Canakit Raspberry Pi 4 Complete Kit.</description>
     </item>
     
+    <item>
+      <title>Tutorials: How to work with arrays in PHP</title>
+      <link>https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/</link>
+      <pubDate>Tue, 05 Aug 2008 17:43:41 +0000</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/</guid>
+      <description>What is an array? Arrays are common to almost every programming language. An array is simply an ordered map of values, indexed so you can find these values, called elements. These elements can be of multiple datatypes, and can be ordered any way you want.
+Array([a] =&amp;gt; 1[b] =&amp;gt; 2[c] =&amp;gt; 3)The Two types of arrays in PHP There are two types of arrays in PHP, associative and enumerative.</description>
+    </item>
+    
   </channel>
 </rss>

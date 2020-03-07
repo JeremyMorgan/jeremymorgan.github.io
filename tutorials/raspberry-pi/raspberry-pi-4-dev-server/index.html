@@ -7,24 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Jeremy Morgan" />
     <meta name="description" content="In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it." />
-    <link rel="stylesheet" href="https://jeremymorgan.github.io/css/main.min.e5f072b03781541f80aa21c5c19466fbaaef8a8b4b47fd09f8f33e885089f2a8.css" />
-
+    <link rel="stylesheet" href="https://jeremymorgan.github.io/css/main.min.82d4461db957875914a790764b1f165cce9402d8007237be9f2b6cbc5fc561c2.css" />
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://jeremymorgan.github.io/baseimages/jeremy-morgan-og.jpg"/>
-
-<meta name="twitter:title" content="Raspberry Pi 4 Dev Server"/>
-<meta name="twitter:description" content="In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it."/>
-
+    <link rel="canonical" href="https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/" />
+    <meta itemprop="name" content="Raspberry Pi 4 Dev Server" />
+    <meta property="article:author" content="https://plus.google.com/+JeremyMorgan" />
+    <meta name="author" content="Jeremy Morgan" />
+    <meta property="article:published_time" content="2020-02-02 10:44:03 -0800 PST" />
+    <meta name="description" content=" In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it. " />
+    <meta itemprop="description" content=" In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it. "/>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta property="og:url" content="https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/" />
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="Raspberry Pi 4 Dev Server" />
-<meta property="og:description" content="In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/" />
-<meta property="og:image" content="https://jeremymorgan.github.io/baseimages/jeremy-morgan-og.jpg"/>
-<meta property="article:published_time" content="2020-02-02T10:44:03-08:00" />
-<meta property="article:modified_time" content="2020-02-02T10:44:03-08:00" />
-
-
+    <meta property="og:description" content=" In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it. " />
+    <meta property="og:image" content="YourDefaultImage" />
+    <meta property="article:published_time" content="2020-02-02 10:44:03 -0800 PST" />
+    <meta property="article:modified_time" content="" />
+    
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@JeremyCMorgan" />
+    <meta name="twitter:creator" content="@JeremyCMorgan" />
+    <meta name="twitter:title" content="Raspberry Pi 4 Dev Server">
+    <meta name="twitter:description"content=" In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it. ">
+    <meta name="twitter:image" content="YourDefaultImage">
+    <meta name="twitter:url" content="https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/">
+    
+    <meta property="fb:app_id" content="198803199072" />
+    <meta property="fb:page_id" content="153875204649532" />
+    
   </head>
   <body>
     <header class="app-header">
@@ -59,8 +74,8 @@
           <li><a href="https://jeremymorgan.github.io/">Home</a></li>
           <li><a href="/blog">Blog Articles</a></li>
           <li><a href="/tutorials">Tutorials</a></li>
-          <li><a href="/tutorials">Courses</a></li>  
-          <li><a href="https://www.pluralsight.com/resource-center/podcasts">Podcast</a>        
+          <li><a href="/tutorials">Courses</a></li>
+          <li><a href="https://www.pluralsight.com/resource-center/podcasts">Podcast</a>
         </ul>
     </header>
     <main class="app-container">
@@ -154,7 +169,7 @@ mkdir /home/git/react-hello-world.git
 <pre><code>cd react-hello-world.git &amp;&amp; git init --bare
 </code></pre><p>Let's go back to our machine and test it out.</p>
 <p>On your developer machine, type in:</p>
-<pre><code>git clone git@[your IP address]:react-hello-world . 
+<pre><code>git clone git@[your IP address]:react-hello-world .
 </code></pre><p>You should be able to clone it your local machine.</p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-5.jpg" alt="Raspberry Pi 4 Development Server"></p>
 <p>If this works, we'll go back to the Raspberry Pi.</p>
@@ -213,7 +228,7 @@ git commit -m &quot;Our first commit&quot;
 <pre><code>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install nodejs
 </code></pre><p>You can verify they're installed by typing in:</p>
-<pre><code>node --version 
+<pre><code>node --version
 npm --version
 </code></pre><p><!-- raw HTML omitted --></p>
 <p><img src="/images/raspberry-pi-4-dev-server/raspberry-pi-4-dev-server-12.jpg" alt="Raspberry Pi 4 Development Server"></p>
