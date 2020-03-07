@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pop!_OS on Jeremy Morgan :: Tech Blog</title>
+    <link>https://jeremymorgan.github.io/categories/pop_os/</link>
+    <description>Recent content in Pop!_OS on Jeremy Morgan :: Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Jeremy Morgan</copyright>
+    
+	<atom:link href="https://jeremymorgan.github.io/categories/pop_os/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Set Up Hugo on Pop!_OS</title>
+      <link>https://jeremymorgan.github.io/2020-03-04-hugo-on-popos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/2020-03-04-hugo-on-popos/</guid>
+      <description>If you want to generate static websites (like this blog) then Hugo is the package for you. There are several cool things about Hugo, the biggest being performance. It compiles static sites faster than any other static site generator I&#39;ve used.
+In the last tutorial, I showed how to set it up and deploy to a small Linux server, and in this article I&#39;ll show you how to set it up for personal development in Pop!</description>
+    </item>
+    
+  </channel>
+</rss>

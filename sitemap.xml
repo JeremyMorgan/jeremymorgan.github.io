@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jeremymorgan.github.io/blog/</loc>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jeremymorgan.github.io/</loc>
-    <lastmod>2020-02-02T10:44:03-08:00</lastmod>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/blog/programming/whiteboard-interview-tips/</loc>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,11 +38,125 @@
   </url>
   
   <url>
+    <loc>https://jeremymorgan.github.io/blog/linux/blog/linux/pine64-pro-laptop-review/</loc>
+    <lastmod>2020-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/blog/programming/blog/programming/tools-csv-text-nimbletext/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/blog/blazor/blog/blazor/what-is-blazor/</loc>
+    <lastmod>2019-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jeremymorgan.github.io/categories/</loc>
+    <lastmod>2008-08-05T17:43:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/php/</loc>
+    <lastmod>2008-08-05T17:43:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/programming/</loc>
+    <lastmod>2008-08-05T17:43:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/tutorials/</loc>
+    <lastmod>2008-08-05T17:43:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/</loc>
+    <lastmod>2008-08-05T17:43:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/blog/programming/how-to-start-programming-for-free/</loc>
+    <lastmod>2007-12-27T13:29:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/blog/programming/my-huge-rpc-ping-list/</loc>
+    <lastmod>2007-12-27T13:29:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-02-10-analyzing-attacks-on-my-server/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-02-07-become-a-react-developer-in-a-weekend/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-02-19-freebsd-dev-machine/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-02-29-create-your-own-blog-5-dollars-a-month/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/dotnet/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/freebsd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-02-15-getting-started-with-wsl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-03-04-hugo-on-popos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/linux/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/pop_os/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/raspberry-pi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/categories/react/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-02-22-stop-fearing-the-whiteboard/</loc>
   </url>
   
   <url>
     <loc>https://jeremymorgan.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-01-10-nimble-text-review/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-01-16-testing-pine64-laptop/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-01-31-raspberry-pi-dev-server/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jeremymorgan.github.io/2020-01-25-pop-os-review/</loc>
   </url>
   
 </urlset>

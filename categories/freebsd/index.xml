@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FreeBSD on Jeremy Morgan :: Tech Blog</title>
+    <link>https://jeremymorgan.github.io/categories/freebsd/</link>
+    <description>Recent content in FreeBSD on Jeremy Morgan :: Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Jeremy Morgan</copyright>
+    
+	<atom:link href="https://jeremymorgan.github.io/categories/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Can you use FreeBSD for a Developer Machine in 2020?</title>
+      <link>https://jeremymorgan.github.io/2020-02-19-freebsd-dev-machine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/2020-02-19-freebsd-dev-machine/</guid>
+      <description>FreeBSD is a solid choice on a server, and it&#39;s ubiquitous in the infrastructure world, but how does it hold up as a desktop machine? As a developer workstation? I found out.
+I&#39;ve been considering moving my blog back to a FreeBSD web server. I&#39;d hosted it that way for years and recently switched it to a Linux machine so I could make Octopress work properly. It uses some old, outdated Ruby gems, and it just seemed easier.</description>
+    </item>
+    
+  </channel>
+</rss>
