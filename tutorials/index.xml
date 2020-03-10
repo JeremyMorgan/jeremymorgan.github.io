@@ -7,10 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Jeremy Morgan</copyright>
-    <lastBuildDate>Sun, 02 Feb 2020 10:44:03 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jeremymorgan.github.io/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Set Up Hugo on Pop!_OS</title>
+      <link>https://jeremymorgan.github.io/tutorials/linux/tutorials/linux/install-hugo-popos/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/tutorials/linux/tutorials/linux/install-hugo-popos/</guid>
+      <description>If you want to generate static websites (like this blog) then Hugo is the package for you. There are several cool things about Hugo, the biggest being performance. It compiles static sites faster than any other static site generator I&amp;rsquo;ve used.
+In the last tutorial, I showed how to set it up and deploy to a small Linux server, and in this article I&amp;rsquo;ll show you how to set it up for personal development in Pop!</description>
+    </item>
+    
+    <item>
+      <title>Create Your Own Blog for 5 Dollars a Month</title>
+      <link>https://jeremymorgan.github.io/tutorials/freebsd/tutorials/freebsd/create-static-blog-hugo-freebsd/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/tutorials/freebsd/tutorials/freebsd/create-static-blog-hugo-freebsd/</guid>
+      <description>Blogging about tech is fun. Having your own blog allows you to help others, polish your skills, and maybe get you a job.
+Blogging on other sites such as Medium, Dev.To, etc can be really fun. I do that all the time. But having your OWN site to manage your content is important as well. This gives you freedom to do things exactly as you want, and you don&amp;rsquo;t have to worry about losing your content.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with WSL</title>
+      <link>https://jeremymorgan.github.io/tutorials/linux/tutorials/linux/getting-started-windows-subsystem-linux/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/tutorials/linux/tutorials/linux/getting-started-windows-subsystem-linux/</guid>
+      <description>Windows Subsystem for Linux (WSL) is awesome.
+It gives you the power to use Linux within your Windows system. A Linux shell can be difficult to learn, but the payoffs are incredible. You can become insanely productive with it. I encourage every Windows developer to give this a try.
+Early in my development career, I was a Unix/Linux developer, and I loved working with the shell. In 2010 I was thrust into the world of Windows with GUIS.</description>
+    </item>
     
     <item>
       <title>Raspberry Pi 4 Dev Server</title>
@@ -18,8 +49,26 @@
       <pubDate>Sun, 02 Feb 2020 10:44:03 -0800</pubDate>
       
       <guid>https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/</guid>
-      <description>In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it.
-For this project, I&#39;m using a Canakit Raspberry Pi 4 Complete Kit.</description>
+      <description>In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&amp;rsquo;ll use a React application, but with a few modifications, you can build just about anything with it.
+For this project, I&amp;rsquo;m using a Canakit Raspberry Pi 4 Complete Kit.</description>
+    </item>
+    
+    <item>
+      <title>How To Monitor Room Temperature with a Raspberry Pi</title>
+      <link>https://jeremymorgan.github.io/tutorials/raspberry-pi/tutorials/freebsd/create-static-blog-hugo-freebsd/</link>
+      <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/tutorials/raspberry-pi/tutorials/freebsd/create-static-blog-hugo-freebsd/</guid>
+      <description>Today I’m going to show you how to monitor ambient room temperature with a Raspberry Pi. We’re going to wire up a temperature sensor, gather temperature values and send them to Firebase. This could be the start of a weather station or other crazy experiments. In my case we’re going to check the temperature of a room to make sure our newborn puppies don’t get too hot or cold during the day.</description>
+    </item>
+    
+    <item>
+      <title>How to Capture The Output of a Linux Command in C&#43;&#43;</title>
+      <link>https://jeremymorgan.github.io/tutorials/c-programming/how-to-capture-the-output-of-a-linux-command-in-c/</link>
+      <pubDate>Fri, 23 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeremymorgan.github.io/tutorials/c-programming/how-to-capture-the-output-of-a-linux-command-in-c/</guid>
+      <description>Ok, I admit this is a pretty obscure one but this came up for a task at work today and I had forgotten exactly how to do this. I Googled around a bit and found a lot of answers I either didn&amp;rsquo;t understand completely or just seemed too complicated for what I was trying to accomplish. I had done this with the boost libraries before but I didn&amp;rsquo;t have them on this machine so I wanted a clean, stdlib type solution.</description>
     </item>
     
     <item>

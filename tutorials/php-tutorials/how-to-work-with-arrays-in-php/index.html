@@ -3,7 +3,7 @@
   <head>
     <title>Tutorials: How to work with arrays in PHP // Jeremy Morgan :: Tech Blog</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.68.0-DEV" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Jeremy Morgan" />
     <meta name="description" content="An easy guide to working with arrays in PHP" />
@@ -24,7 +24,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Tutorials: How to work with arrays in PHP" />
     <meta property="og:description" content=" An easy guide to working with arrays in PHP " />
-    <meta property="og:image" content="YourDefaultImage" />
+    <meta property="og:image" content="https://www.jeremymorgan.com/images/php-ogimage.png" />
     <meta property="article:published_time" content="2008-08-05 17:43:41 &#43;0000 UTC" />
     <meta property="article:modified_time" content="" />
     
@@ -34,7 +34,7 @@
     <meta name="twitter:creator" content="@JeremyCMorgan" />
     <meta name="twitter:title" content="Tutorials: How to work with arrays in PHP">
     <meta name="twitter:description"content=" An easy guide to working with arrays in PHP ">
-    <meta name="twitter:image" content="YourDefaultImage">
+    <meta name="twitter:image" content="https://www.jeremymorgan.com/images/php-ogimage.png">
     <meta name="twitter:url" content="https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/">
     
     <meta property="fb:app_id" content="198803199072" />
@@ -113,14 +113,14 @@
 )
 </code></pre><h3 id="the-two-types-of-arrays-in-php">The Two types of arrays in PHP</h3>
 <p>There are two types of arrays in PHP, <a href="http://en.wikipedia.org/wiki/Associative_array">associative</a> and <a href="http://en.wikipedia.org/wiki/Enumerative">enumerative</a>. The difference between the two is how they are indexed.</p>
-<p><strong>Associative array</strong>s allow you to index each element with an arbitrary value. For example, you can use letters of the alphabet, or just about anything to index the value, as long as it's unique. Here is an example:</p>
+<p><strong>Associative array</strong>s allow you to index each element with an arbitrary value. For example, you can use letters of the alphabet, or just about anything to index the value, as long as it&rsquo;s unique. Here is an example:</p>
 <pre><code>Array
 (
     [name] =&gt; Jeremy
     [website] =&gt; jeremymorgan.com
     [occupation] =&gt; developer
 )
-</code></pre><p>Some programmers prefer associative arrays because they can use the key to indicate what type of data is stored in the element, like &ldquo;name&rdquo; in the above example. This is an indicator of what is stored, however its not a rule that's enforced. You can just as easily put a phone number in a name field and vice versa.</p>
+</code></pre><p>Some programmers prefer associative arrays because they can use the key to indicate what type of data is stored in the element, like &ldquo;name&rdquo; in the above example. This is an indicator of what is stored, however its not a rule that&rsquo;s enforced. You can just as easily put a phone number in a name field and vice versa.</p>
 <p><strong>Enumerative arrays</strong> are indexed with a numerical index, either auto incremented, or random. PHP is very flexible with arrays, you can use numbers at will, and add in associative elements, and return to enumerative again. Also, the keys do not need to be sequential. Also note if you leave a key blank, an auto incremented number will be assigned to the key. Here is an example of an enumerative array:</p>
 <pre><code>Array
 (
@@ -144,7 +144,7 @@ foreach ($ourary as $value) {
     echo &quot;Value: $value&quot;;
 
 }
-</code></pre><p>There are many things arrays can be really handy for, and I'll cover that in future articles.</p>
+</code></pre><p>There are many things arrays can be really handy for, and I&rsquo;ll cover that in future articles.</p>
 <p><strong>Checking your arrays</strong></p>
 <p>One question you might have is, how to easily check the data in the array. There are two easy ways to do this.</p>
 <pre><code>print_r($yourary);

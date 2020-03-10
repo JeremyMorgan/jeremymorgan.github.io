@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>How To Monitor Room Temperature with a Raspberry Pi // Jeremy Morgan :: Tech Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.68.0-DEV" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Jeremy Morgan" />
+    <meta name="description" content="How to monitor ambient room temperature with a Raspberry Pi using an inexpensive waterproof air temperature sensor and uploading the results to Firebase." />
+    <link rel="stylesheet" href="https://jeremymorgan.github.io/css/main.min.82d4461db957875914a790764b1f165cce9402d8007237be9f2b6cbc5fc561c2.css" />
+    
+    <link rel="canonical" href="https://jeremymorgan.github.io/tutorials/raspberry-pi/tutorials/freebsd/create-static-blog-hugo-freebsd/" />
+    <meta itemprop="name" content="How To Monitor Room Temperature with a Raspberry Pi" />
+    <meta property="article:author" content="https://plus.google.com/+JeremyMorgan" />
+    <meta name="author" content="Jeremy Morgan" />
+    <meta property="article:published_time" content="2015-07-26 00:00:00 &#43;0000 UTC" />
+    <meta name="description" content=" How to monitor ambient room temperature with a Raspberry Pi using an inexpensive waterproof air temperature sensor and uploading the results to Firebase. " />
+    <meta itemprop="description" content=" How to monitor ambient room temperature with a Raspberry Pi using an inexpensive waterproof air temperature sensor and uploading the results to Firebase. "/>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta property="og:url" content="https://jeremymorgan.github.io/tutorials/raspberry-pi/tutorials/freebsd/create-static-blog-hugo-freebsd/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How To Monitor Room Temperature with a Raspberry Pi" />
+    <meta property="og:description" content=" How to monitor ambient room temperature with a Raspberry Pi using an inexpensive waterproof air temperature sensor and uploading the results to Firebase. " />
+    <meta property="og:image" content="https://www.jeremymorgan.com/images/5-dollar-blog/how-to-static-blog-freebsd-og.jpg" />
+    <meta property="article:published_time" content="2015-07-26 00:00:00 &#43;0000 UTC" />
+    <meta property="article:modified_time" content="" />
+    
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@JeremyCMorgan" />
+    <meta name="twitter:creator" content="@JeremyCMorgan" />
+    <meta name="twitter:title" content="How To Monitor Room Temperature with a Raspberry Pi">
+    <meta name="twitter:description"content=" How to monitor ambient room temperature with a Raspberry Pi using an inexpensive waterproof air temperature sensor and uploading the results to Firebase. ">
+    <meta name="twitter:image" content="https://www.jeremymorgan.com/images/5-dollar-blog/how-to-static-blog-freebsd-og.jpg">
+    <meta name="twitter:url" content="https://jeremymorgan.github.io/tutorials/raspberry-pi/tutorials/freebsd/create-static-blog-hugo-freebsd/">
+    
+    <meta property="fb:app_id" content="198803199072" />
+    <meta property="fb:page_id" content="153875204649532" />
+    
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://jeremymorgan.github.io/"><img class="app-header-avatar" src="/baseimages/jeremy-morgan.jpg" alt="Jeremy Morgan" /></a>
+      <h1>Jeremy Morgan</h1>
+      <p>Mostly Coherent Ramblings of a Silicon Forest Software Developer</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://www.twitter.com/JeremyCMorgan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.youtube.com/jeremymorgan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-youtube">
+  <title>youtube</title>
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg></a>
+        
+          <a target="_blank" href="https://github.com/JeremyMorgan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.linkedin.com/in/jeremycmorgan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg></a>
+        
+      </div>
+      <div class="links">
+        <ul>
+          <li><a href="https://jeremymorgan.github.io/">Home</a></li>
+          <li><a href="/blog">Blog Articles</a></li>
+          <li><a href="/tutorials">Tutorials</a></li>
+          <li><a href="/tutorials">Courses</a></li>
+          <li><a href="https://www.pluralsight.com/resource-center/podcasts">Podcast</a>
+        </ul>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">How To Monitor Room Temperature with a Raspberry Pi</h1>
+      <div class="post-meta">
+        <div>
+         <em>Author: <a href="https://www.twitter.com/JeremyCMorgan">Jeremy Morgan</a></em>
+        </div>
+        <div>
+          Published: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 26, 2015
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          7 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>Today I’m going to show you how to monitor ambient room temperature with a Raspberry Pi. We’re going to wire up a temperature sensor, gather temperature values and send them to Firebase. This could be the start of a weather station or other crazy experiments. In my case we’re going to check the temperature of a room to make sure our newborn puppies don’t get too hot or cold during the day.</p>
+<h3 id="what-youll-need">What you&rsquo;ll need:</h3>
+<ul>
+<li>Raspberry Pi (I am using a Raspberry Pi 2, but you don&rsquo;t have to)</li>
+<li>Breadboard</li>
+<li>Temperature Sensor</li>
+<li>A <a href="https://www.firebase.com/signup/">Firebase account</a> (optional)</li>
+</ul>
+<p><strong>Notice:</strong> I have updated the <!-- raw HTML omitted -->source code for this article<!-- raw HTML omitted --> and built <!-- raw HTML omitted -->an ASP.Net Web API<!-- raw HTML omitted --> for this project. Watch them on GitHub to get notified when it&rsquo;s updated.</p>
+<h3 id="hooking-up-the-hardware">Hooking up the Hardware</h3>
+<p>I ordered the DS18B20 Waterproof Digital temperature sensor + extras from Adafruit (<a href="http://www.adafruit.com/products/381">Get it here</a>) which is an excellent value at $10.</p>
+<p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-1.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>Out of the box the wires are stripped, but since I&rsquo;m putting this in a bread board, I decided to solder them. I quickly learned my last roll of solder is rather poor quality, but it will work:</p>
+<p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-2.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>I then wired it up to the breadboard. There are plenty of diagrams online for wiring this up, I hooked</p>
+<ul>
+<li>Red: +3v</li>
+<li>Yellow: GPIO 4</li>
+<li>Blue: Ground</li>
+</ul>
+<p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-3.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>The kit comes with a 4.7k resistor which you place between the red and yellow. The breadboard I use is from the <a href="http://www.amazon.com/gp/offer-listing/B008XVAVAW/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B008XVAVAW&amp;linkCode=am2&amp;tag=webfootcentra-20&amp;linkId=VF3GTBAGOAKMKG2S">Canakit for Raspberry Pi</a>. This is connected to a Raspberry Pi 2, although a Raspberry Pi B would work just the same.</p>
+<h3 id="testing-the-sensor">Testing the Sensor</h3>
+<p>The support for the DS18B20 on the Pi makes this part really trivial. First you need to edit /boot/config.txt:</p>
+<pre><code>sudo nano /boot/config.txt
+</code></pre><p>and add the following line:</p>
+<pre><code>dtoverlay=w1-gpio
+</code></pre><p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-4.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>Then save and reboot the Pi.</p>
+<p>To test the functionality, load in the kernel modules:</p>
+<pre><code>sudo modprobe w1-gpio
+sudo modprobe w1-therm
+</code></pre><p>Run the following to find your device:</p>
+<pre><code>cd /sys/bus/w1/devices
+ls -la
+</code></pre><p>This will show you the directory your device is in, based on your serial number. It should start with 28x:</p>
+<p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-5.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>cd into that directory, then type:</p>
+<pre><code>cat w1_slave
+</code></pre><p>and it should look like this:</p>
+<p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-6.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>Look for crc=da YES. The YES means it&rsquo;s working, and the t=n is the celcius*1000. This verifies the sensor is functioning.</p>
+<h3 id="writing-the-temp-gathering-script">Writing the Temp Gathering Script.</h3>
+<p>For this step, you will be creating a Python script to read the sensor. You can use Nano on the Pi, or use an IDE on your desktop and copy the file up to the Pi. I used <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> in Linux to write the script then copied it up to my Pi with each iteration with the following command:</p>
+<pre><code>scp readtemp.py pi@192.168.1.12:/home/pi
+</code></pre><p>This can be a little more fluid when developing.</p>
+<p>The initial file we&rsquo;ll create is some code lifted from the Adafruit tutorials:</p>
+<pre><code>import os
+import glob
+import time
+os.system('modprobe w1-gpio')
+os.system('modprobe w1-therm')
+base_dir = '/sys/bus/w1/devices/'
+device_folder = glob.glob(base_dir + '28*')[0]
+device_file = device_folder + '/w1_slave'
+
+def read_temp_raw():
+    f = open(device_file, 'r')
+    lines = f.readlines()
+    f.close()
+    return lines
+
+def read_temp():
+    lines = read_temp_raw()
+    while lines[0].strip()[-3:] != 'YES':
+        time.sleep(0.2)
+        lines = read_temp_raw()
+    equals_pos = lines[1].find('t=')
+    if equals_pos != -1:
+        temp_string = lines[1][equals_pos+2:]
+        temp_c = float(temp_string) / 1000.0
+        temp_f = temp_c * 9.0 / 5.0 + 32.0
+        return temp_c, temp_f
+
+while True:
+    print(read_temp())
+    time.sleep(1)
+</code></pre><p>This is a super simple script that loads in the kernel modules and reads the device. The function read_temp() opens the device and reads it by parsing through the lines and spitting out Celsius and Fahrenheit values. Then at the bottom we have a loop to do this every second.</p>
+<pre><code>python readtemp.py
+</code></pre><p>Your output should look like this:</p>
+<p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-7.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>This is great, but we can&rsquo;t do much with it. At this point you could just write these values to a file and parse them out later. But we&rsquo;re going to store these values in a datastore.</p>
+<p>In readtemp.py, let&rsquo;s make some changes.</p>
+<p>Remove the loop:</p>
+<pre><code>while True:
+    print(read_temp())
+    time.sleep(1)
+</code></pre><p>and replace it with this:</p>
+<pre><code>print str(calendar.timegm(time.gmtime())) + ',' + str(read_temp())
+</code></pre><p>Then add the following lines to the top:</p>
+<pre><code>import calendar
+import time
+</code></pre><p>Run the file again and you should see this:</p>
+<p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-8.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>We&rsquo;re getting closer! Here is what the final script should look like:</p>
+<pre><code>import os
+import glob
+import subprocess
+import calendar
+import time
+import urllib2
+import json
+
+#initialize
+os.system('modprobe w1-gpio')
+os.system('modprobe w1-therm')
+
+#device
+base_dir = '/sys/bus/w1/devices/'
+device_folder = glob.glob(base_dir + '28*')[0]
+device_file = device_folder + '/w1_slave'
+
+# Opens raw device, code changed to reflect issue in Raspian
+def read_temp_raw():
+    catdata = subprocess.Popen(['cat',device_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out,err = catdata.communicate()
+    out_decode = out.decode('utf-8')
+    lines = out_decode.split('\n')
+    return lines
+
+# Reads temperature, outputs farenhiet
+def read_temp():
+    lines = read_temp_raw()
+    while lines[0].strip()[-3:] != 'YES':
+        time.sleep(0.2)
+        lines = read_temp_raw()
+    equals_pos = lines[1].find('t=')
+    if equals_pos != -1:
+        temp_string = lines[1][equals_pos+2:]
+        temp_c = float(temp_string) / 1000.0
+        temp_f = temp_c * 9.0 / 5.0 + 32.0
+        return temp_f
+
+## Please add some authentication or a secret here!
+
+url = 'https://yourfirebaseapp.firebaseio.com/readings.json'
+
+postdata = {
+    'date': str(calendar.timegm(time.gmtime())),
+    'temp': str(read_temp())
+}
+
+req = urllib2.Request(url)
+req.add_header('Content-Type','application/json')
+data = json.dumps(postdata)
+
+response = urllib2.urlopen(req,data)
+</code></pre><h3 id="pushing-the-results-to-firebase">Pushing the results to Firebase</h3>
+<p>This is an optional step, but here we are going to push the results up to <a href="https://www.firebase.com/features.html">Firebase</a>. You can <a href="https://www.firebase.com/signup/">create an account for free</a>, and I would encourage you to check it out. The URL will be the url of the project you create and the name of a JSON file to use for storage. For example:</p>
+<blockquote>
+<p><a href="https://mycooltemperatureapp.firebaseio.com/readings.json">https://mycooltemperatureapp.firebaseio.com/readings.json</a></p>
+</blockquote>
+<p>You can replace with Firebase with any API call at this point, and it&rsquo;s easy to make a POST in Python:</p>
+<p>Add the following includes:</p>
+<pre><code>import urllib2
+import json
+</code></pre><p>Then add the following to the bottom:</p>
+<pre><code>url = 'https://mycooltemperatureapp.firebaseio.com/readings.json'
+postdata = {
+    'date': str(calendar.timegm(time.gmtime())),
+    'temp': str(read_temp())
+}
+
+req = urllib2.Request(url)
+req.add_header('Content-Type','application/json')
+data = json.dumps(postdata)
+
+#you don't have to do anything with response
+response = urllib2.urlopen(req,data)
+</code></pre><p>Now run the file a few times, and open up your Firebase console, and you should see something that looks like this:</p>
+<p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-9.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>Congrats! you&rsquo;re now storing data. You can export this to a CSV or create a JavaScript application to display it. I&rsquo;ll be covering what we do with this data in a future tutorial.</p>
+<p><strong>NOTE</strong>: You really should add some authentication to your Firebase database if you care about the data.</p>
+<h3 id="create-a-cron-job-to-automatically-gather-data">Create a CRON Job to Automatically gather data</h3>
+<p>There&rsquo;s two ways we can run this script automatically. We can add the loop back in, and just run the Python script and keep it running. You can use something like <a href="http://linux.101hacks.com/unix/nohup-command/">nohup</a> to run it as a service but that&rsquo;s a little shaky. I&rsquo;d rather just run the script once a minute with a CRON job. To do this, type in</p>
+<pre><code>crontab -e
+</code></pre><p>to run the cron editor. Add an entry like this:</p>
+<pre><code>* * * * * /usr/bin/python /home/pi/readtemp.py
+</code></pre><p><img src="/images/monitor-room-temp-raspberry-pi/monitor-room-temperature-raspberry-pi-10.jpg" alt="Monitor room temperature with Raspberry Pi"></p>
+<p>And save the file. CRON will automatically update and start running this command every minute (or whatever you set it to).</p>
+<p>This will ensure that your script is run at regular intervals. You can set it to run every minute, hourly, daily or whatever you&rsquo;d like. Here&rsquo;s some more information <a href="http://code.tutsplus.com/tutorials/scheduling-tasks-with-cron-jobs--net-8800">about scheduling cron jobs.</a>.</p>
+<h3 id="summary">Summary</h3>
+<p>I hope this tutorial has helped show you how to monitor ambient air temperature with a Raspberry Pi. If you purchase this same sensor it&rsquo;s waterproof which means there is much more you can do with it. You can also hook up multiple sensors to the Pi, separated by serial numbers.</p>
+<p>There are tons of neat things you can do with this information, and I encourage you to experiment. In a future tutorial we&rsquo;ll take some of this data I&rsquo;ve gathered and do something with it. Thanks for reading.</p>
+<p>You can <strong><a href="https://github.com/JeremyMorgan/Raspberry_Pi_Temperature">download the source code for this article</a></strong> at GitHub.</p>
+
+<br />
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	 
+</style>
+<div id="mc_embed_signup">
+<form action="https://jeremymorgan.us12.list-manage.com/subscribe/post?u=5e52fc440f04a3aabd4a1b06b&amp;id=e02bf01fbc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Want to be notified every time a new tutorial is posted?</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e52fc440f04a3aabd4a1b06b_e02bf01fbc" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

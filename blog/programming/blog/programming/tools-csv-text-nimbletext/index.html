@@ -3,7 +3,7 @@
   <head>
     <title>The Developer Tool You Can&#39;t Live Without // Jeremy Morgan :: Tech Blog</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.68.0-DEV" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Jeremy Morgan" />
     <meta name="description" content="NimbleText is the world&#39;s simplest code generator. It formats your data using the patterns you supply. Read about it here." />
@@ -24,7 +24,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="The Developer Tool You Can&#39;t Live Without" />
     <meta property="og:description" content=" NimbleText is the world&#39;s simplest code generator. It formats your data using the patterns you supply. Read about it here. " />
-    <meta property="og:image" content="YourDefaultImage" />
+    <meta property="og:image" content="https://www.jeremymorgan.com/images/what-is-blazor/what-is-blazor-og.jpg" />
     <meta property="article:published_time" content="2020-01-10 00:00:00 &#43;0000 UTC" />
     <meta property="article:modified_time" content="" />
     
@@ -34,7 +34,7 @@
     <meta name="twitter:creator" content="@JeremyCMorgan" />
     <meta name="twitter:title" content="The Developer Tool You Can&#39;t Live Without">
     <meta name="twitter:description"content=" NimbleText is the world&#39;s simplest code generator. It formats your data using the patterns you supply. Read about it here. ">
-    <meta name="twitter:image" content="YourDefaultImage">
+    <meta name="twitter:image" content="https://www.jeremymorgan.com/images/what-is-blazor/what-is-blazor-og.jpg">
     <meta name="twitter:url" content="https://jeremymorgan.github.io/blog/programming/blog/programming/tools-csv-text-nimbletext/">
     
     <meta property="fb:app_id" content="198803199072" />
@@ -103,15 +103,15 @@
         </div></div>
     </header>
     <div class="post-content">
-      <p>I'm introducing a text / code generation tool that you will fall in love with. If you're a developer or someone who works with text or tabulated data you <strong>need</strong> this tool.</p>
+      <p>I&rsquo;m introducing a text / code generation tool that you will fall in love with. If you&rsquo;re a developer or someone who works with text or tabulated data you <strong>need</strong> this tool.</p>
 <!-- raw HTML omitted -->
-<p>It's called <a href="http://bit.ly/NimbleText">Nimble Text</a> and it's awesome. Here's how the developer of Nimble Text describes it:</p>
+<p>It&rsquo;s called <a href="http://bit.ly/NimbleText">Nimble Text</a> and it&rsquo;s awesome. Here&rsquo;s how the developer of Nimble Text describes it:</p>
 <blockquote>
 <p>You can be more awesome at your job by keeping this tool always within reach.</p>
 <p>NimbleText is a text manipulation and code generation tool available online or as a free download. It magnifies your ability to perform incredible feats of text and data wrangling.</p>
 </blockquote>
-<p>So it's a bold claim to say this will make you better at your job. Sounds crazy right?</p>
-<p>I have been using this for years (since 2011-2012) and I can tell it's certainly made me more effective.</p>
+<p>So it&rsquo;s a bold claim to say this will make you better at your job. Sounds crazy right?</p>
+<p>I have been using this for years (since 2011-2012) and I can tell it&rsquo;s certainly made me more effective.</p>
 <p>Download it and follow along.</p>
 <h2 id="how-nimble-text-works">How Nimble Text Works</h2>
 <p><img src="/images/tools-csv-text-nimbletext/tools-csv-text-nimbletext-01.jpg" alt="Nimble Text"></p>
@@ -120,24 +120,24 @@
 You put in your pattern ($0, $1, etc represents the columns)
 For each row of data it will substitute the values and display the results.</p>
 <p>in the sample above, you can see rows of data that appear to be last name, first name, company name.</p>
-<p>So let's look at the top row. In our substitution pattern we're creating an email and it shows $1 (2nd column, starts at 0) which we know is a first name. Then we have a period, and then $0 which we know is the last name, then @ $2 .com which we assume will make Initech.com.</p>
-<p>One of the coolest parts of this is that the pattern doesn't need to be line by line and you don't need to be a Regex expert to do this.</p>
-<p>Here's another example of how you can quickly add quotes around CSV values. This is using data from <a href="http://bit.ly/Mockaroo">Mockaroo</a>.</p>
+<p>So let&rsquo;s look at the top row. In our substitution pattern we&rsquo;re creating an email and it shows $1 (2nd column, starts at 0) which we know is a first name. Then we have a period, and then $0 which we know is the last name, then @ $2 .com which we assume will make Initech.com.</p>
+<p>One of the coolest parts of this is that the pattern doesn&rsquo;t need to be line by line and you don&rsquo;t need to be a Regex expert to do this.</p>
+<p>Here&rsquo;s another example of how you can quickly add quotes around CSV values. This is using data from <a href="http://bit.ly/Mockaroo">Mockaroo</a>.</p>
 <p>So we take this CSV file and dump it in the input:</p>
 <p><img src="/images/tools-csv-text-nimbletext/tools-csv-text-nimbletext-02.jpg" alt="Nimble Text"></p>
 <p>Then we use this simple pattern, which puts quotes around all the values:</p>
 <p><img src="/images/tools-csv-text-nimbletext/tools-csv-text-nimbletext-03.jpg" alt="Nimble Text"></p>
 <p>We press generate, and get this:</p>
 <p><img src="/images/tools-csv-text-nimbletext/tools-csv-text-nimbletext-04.jpg" alt="Nimble Text"></p>
-<p>It's that easy! But this is isn't really impressive, because you probably aren't doing a ton of CSV format conversions on a daily basis. But there's a lot of potential here.</p>
+<p>It&rsquo;s that easy! But this is isn&rsquo;t really impressive, because you probably aren&rsquo;t doing a ton of CSV format conversions on a daily basis. But there&rsquo;s a lot of potential here.</p>
 <h2 id="how-i-use-this-as-a-developer">How I Use This as a Developer</h2>
-<p>So there are tons of things you can do with this that are <a href="http://bit.ly/2FAAbSm">explained on their website</a>. You can do cool things like <a href="http://bit.ly/2NgY6dN">remove leading trailing and leading spaces</a> or convert <a href="http://bit.ly/2FBxC2s">spaces to tabs</a>. I love using things like <a href="http://bit.ly/39XYZSm">converting to Camel Case</a> and I've done weird stuff with <a href="http://bit.ly/37WqU3m">Base64 encoding</a>.</p>
-<p>I won't repeat what's already been written there. I'll tell you how <em>I've been using it</em> all these years.</p>
-<p>Let's take our sample data set:</p>
+<p>So there are tons of things you can do with this that are <a href="http://bit.ly/2FAAbSm">explained on their website</a>. You can do cool things like <a href="http://bit.ly/2NgY6dN">remove leading trailing and leading spaces</a> or convert <a href="http://bit.ly/2FBxC2s">spaces to tabs</a>. I love using things like <a href="http://bit.ly/39XYZSm">converting to Camel Case</a> and I&rsquo;ve done weird stuff with <a href="http://bit.ly/37WqU3m">Base64 encoding</a>.</p>
+<p>I won&rsquo;t repeat what&rsquo;s already been written there. I&rsquo;ll tell you how <em>I&rsquo;ve been using it</em> all these years.</p>
+<p>Let&rsquo;s take our sample data set:</p>
 <p><img src="/images/tools-csv-text-nimbletext/tools-csv-text-nimbletext-02.jpg" alt="Nimble Text"></p>
-<p>And we'll see what we can do with it.</p>
+<p>And we&rsquo;ll see what we can do with it.</p>
 <h3 id="create-json">Create JSON</h3>
-<p>Let's say I want to make JSON out of this. I would put in a pattern like this:</p>
+<p>Let&rsquo;s say I want to make JSON out of this. I would put in a pattern like this:</p>
 <pre><code>{
   &quot;id&quot;: $0,
   &quot;first_name&quot;: &quot;$1&quot;,
@@ -150,7 +150,7 @@ For each row of data it will substitute the values and display the results.</p>
 <p><img src="/images/tools-csv-text-nimbletext/tools-csv-text-nimbletext-05.jpg" alt="Nimble Text"></p>
 <p>and it will repeat for every row of data. Very cool, and easy.</p>
 <h3 id="make-some-objects">Make some objects</h3>
-<p>So as a C# Developer sometimes I'd generate fake data and then use it for Unit testing. With our sample data, I would create a class like this:</p>
+<p>So as a C# Developer sometimes I&rsquo;d generate fake data and then use it for Unit testing. With our sample data, I would create a class like this:</p>
 <pre><code>public class Person
 {
     public string Name { get; set; }
@@ -160,7 +160,7 @@ For each row of data it will substitute the values and display the results.</p>
     public string Gender { get; set; }
     public string IPAddress { get; set; }
 }
-</code></pre><p>Then, let's say I want to create a collection of these objects. I then enter a pattern like this into Nimble Text:</p>
+</code></pre><p>Then, let&rsquo;s say I want to create a collection of these objects. I then enter a pattern like this into Nimble Text:</p>
 <pre><code>new Person { Id = $0, FirstName = &quot;$1&quot;, LastName = &quot;$2&quot;, Email = &quot;$3&quot;, Gender = &quot;$4&quot;, IPAddress = &quot;$5&quot; },
 </code></pre><p>Then, I click &ldquo;calculate&rdquo; and get this:</p>
 <p><img src="/images/tools-csv-text-nimbletext/tools-csv-text-nimbletext-06.jpg" alt="Nimble Text"></p>
@@ -198,7 +198,7 @@ $EACH($0, &quot;$1&quot;, &quot;$2&quot;, &quot;$3&quot;, &quot;$4&quot;, &quot;
 (10, &quot;Issy&quot;, &quot;Ramplee&quot;, &quot;iramplee9@com.com&quot;, &quot;Female&quot;, &quot;53.253.248.96&quot;)
 </code></pre><p>Easy as pie! Anything you can do with JavaScript you can do with Nimble Text.</p>
 <h3 id="html-tables">HTML Tables</h3>
-<p>So this is odd but something I've had to do in the past, and Nimble Text works great for it. Here's how you create an HTML table for our sample data:</p>
+<p>So this is odd but something I&rsquo;ve had to do in the past, and Nimble Text works great for it. Here&rsquo;s how you create an HTML table for our sample data:</p>
 <pre><code>$ONCE&lt;table&gt;
 $ONCE    &lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;First Name&lt;/th&gt;&lt;th&gt;Last Name&lt;/th&gt;&lt;th&gt;Email&lt;/th&gt;&lt;th&gt;Gender&lt;/th&gt;&lt;th&gt;IP Address&lt;/th&gt;&lt;/tr&gt;
 $EACH    &lt;tr&gt;&lt;td&gt;$0&lt;/td&gt;&lt;td&gt;$1&lt;/td&gt;&lt;td&gt;$2&lt;/td&gt;&lt;td&gt;$3&lt;/td&gt;&lt;td&gt;$4&lt;/td&gt;&lt;td&gt;$5&lt;/td&gt;&lt;/tr&gt;
@@ -207,9 +207,9 @@ $ONCE&lt;/table&gt;
 <p><img src="/images/tools-csv-text-nimbletext/tools-csv-text-nimbletext-07.jpg" alt="Nimble Text"></p>
 <p>A usable HTML table!!</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This tool will help you become a better, more effective developer. You can use it for all kinds of code generation. I've done some crazy things with the <a href="http://bit.ly/2R8qeAP">Keywords</a> and <a href="http://bit.ly/2QGShbA">Functions</a> in this program. You can write code to generate code.</p>
-<p>I've seen the most benefit with time savings. Things like mocking data or processing CSVs are boring and tedious. When you're doing boring tedious things you make mistakes. So once you work this tool into your workflow you'll work faster with fewer mistakes.</p>
-<p>Once it becomes a part of your routine you won't want to work without it.</p>
+<p>This tool will help you become a better, more effective developer. You can use it for all kinds of code generation. I&rsquo;ve done some crazy things with the <a href="http://bit.ly/2R8qeAP">Keywords</a> and <a href="http://bit.ly/2QGShbA">Functions</a> in this program. You can write code to generate code.</p>
+<p>I&rsquo;ve seen the most benefit with time savings. Things like mocking data or processing CSVs are boring and tedious. When you&rsquo;re doing boring tedious things you make mistakes. So once you work this tool into your workflow you&rsquo;ll work faster with fewer mistakes.</p>
+<p>Once it becomes a part of your routine you won&rsquo;t want to work without it.</p>
 <p><a href="http://bit.ly/NimbleText">Download</a> it, try it out, and <strong><a href="http://bit.ly/JeremyCMorgan">let me know what you think!</a></strong></p>
 
     </div>

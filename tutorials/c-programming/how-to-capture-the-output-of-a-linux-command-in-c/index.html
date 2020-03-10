@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>How to Capture The Output of a Linux Command in C&#43;&#43; // Jeremy Morgan :: Tech Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.68.0-DEV" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Jeremy Morgan" />
+    <meta name="description" content="A quick way to capture the output of a Linux command in your C&#43;&#43; program" />
+    <link rel="stylesheet" href="https://jeremymorgan.github.io/css/main.min.82d4461db957875914a790764b1f165cce9402d8007237be9f2b6cbc5fc561c2.css" />
+    
+    <link rel="canonical" href="https://jeremymorgan.github.io/tutorials/c-programming/how-to-capture-the-output-of-a-linux-command-in-c/" />
+    <meta itemprop="name" content="How to Capture The Output of a Linux Command in C&#43;&#43;" />
+    <meta property="article:author" content="https://plus.google.com/+JeremyMorgan" />
+    <meta name="author" content="Jeremy Morgan" />
+    <meta property="article:published_time" content="2011-09-23 00:00:00 &#43;0000 UTC" />
+    <meta name="description" content=" A quick way to capture the output of a Linux command in your C&#43;&#43; program " />
+    <meta itemprop="description" content=" A quick way to capture the output of a Linux command in your C&#43;&#43; program "/>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta property="og:url" content="https://jeremymorgan.github.io/tutorials/c-programming/how-to-capture-the-output-of-a-linux-command-in-c/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to Capture The Output of a Linux Command in C&#43;&#43;" />
+    <meta property="og:description" content=" A quick way to capture the output of a Linux command in your C&#43;&#43; program " />
+    <meta property="og:image" content="https://www.jeremymorgan.com/images/linux-ogimage.png" />
+    <meta property="article:published_time" content="2011-09-23 00:00:00 &#43;0000 UTC" />
+    <meta property="article:modified_time" content="" />
+    
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@JeremyCMorgan" />
+    <meta name="twitter:creator" content="@JeremyCMorgan" />
+    <meta name="twitter:title" content="How to Capture The Output of a Linux Command in C&#43;&#43;">
+    <meta name="twitter:description"content=" A quick way to capture the output of a Linux command in your C&#43;&#43; program ">
+    <meta name="twitter:image" content="https://www.jeremymorgan.com/images/linux-ogimage.png">
+    <meta name="twitter:url" content="https://jeremymorgan.github.io/tutorials/c-programming/how-to-capture-the-output-of-a-linux-command-in-c/">
+    
+    <meta property="fb:app_id" content="198803199072" />
+    <meta property="fb:page_id" content="153875204649532" />
+    
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://jeremymorgan.github.io/"><img class="app-header-avatar" src="/baseimages/jeremy-morgan.jpg" alt="Jeremy Morgan" /></a>
+      <h1>Jeremy Morgan</h1>
+      <p>Mostly Coherent Ramblings of a Silicon Forest Software Developer</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://www.twitter.com/JeremyCMorgan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.youtube.com/jeremymorgan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-youtube">
+  <title>youtube</title>
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg></a>
+        
+          <a target="_blank" href="https://github.com/JeremyMorgan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.linkedin.com/in/jeremycmorgan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg></a>
+        
+      </div>
+      <div class="links">
+        <ul>
+          <li><a href="https://jeremymorgan.github.io/">Home</a></li>
+          <li><a href="/blog">Blog Articles</a></li>
+          <li><a href="/tutorials">Tutorials</a></li>
+          <li><a href="/tutorials">Courses</a></li>
+          <li><a href="https://www.pluralsight.com/resource-center/podcasts">Podcast</a>
+        </ul>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">How to Capture The Output of a Linux Command in C&#43;&#43;</h1>
+      <div class="post-meta">
+        <div>
+         <em>Author: <a href="https://www.twitter.com/JeremyCMorgan">Jeremy Morgan</a></em>
+        </div>
+        <div>
+          Published: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 23, 2011
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>Ok, I admit this is a pretty obscure one but this came up for a task at work today and I had forgotten exactly how to do this. I Googled around a bit and found a lot of answers I either didn&rsquo;t understand completely or just seemed too complicated for what I was trying to accomplish. I had done this with the boost libraries before but I didn&rsquo;t have them on this machine so I wanted a clean, stdlib type solution.</p>
+<p>I dug around and found this snippet of code on my hard drive, and put something together to make it work. I didn&rsquo;t write it, and I don&rsquo;t remember where it came from so I can&rsquo;t give credit for it, but it works like a charm:</p>
+<p>(tested using G++ v. 4.4.4)</p>
+<pre><code>    string GetStdoutFromCommand(string cmd) {
+
+    string data;
+    FILE * stream;
+    const int max_buffer = 256;
+    char buffer[max_buffer];
+    cmd.append(&quot; 2&gt;&amp;1&quot;);
+
+    stream = popen(cmd.c_str(), &quot;r&quot;);
+    if (stream) {
+      while (!feof(stream))
+        if (fgets(buffer, max_buffer, stream) != NULL) data.append(buffer);
+          pclose(stream);
+      }   
+    return data;
+    }
+</code></pre><p>As you can see, this is a function and you simply pass the command as a string to that function. It&rsquo;s really easy to use. As a note, you can run system commands from within C using <a href="http://www.cplusplus.com/reference/clibrary/cstdlib/system/">system.</a> The problem with this is, the command is often run first, before any output commands and the function returns an integer indicating success or failure, but not the output of the string. The function above fixes that for you.</p>
+<p>What it does is creates a buffer, opens up a read-only stream, runs the command and captures the output, stuffs it into the buffer and returns it as a string.</p>
+<p>Here is how we put it to use:</p>
+<pre><code>int main (){
+
+    string ls = GetStdoutFromCommand(&quot;ls -la&quot;);
+
+    cout &lt;&lt; &quot;LS: &quot; &lt;&lt; ls &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre><p>Keep in mind that there is no real checking here, and you should test the outputs of the commands carefully. For instance, when I used it today I had a set of long commands where things were piped into grep and cut, etc and I found that if I got unexpected output it caused a problem which hung the executable. So you want to make sure and validate your input and output as you go along, don&rsquo;t just go running a bunch of commands and working on the output without some good error checking.</p>
+<p>Here is the full code:</p>
+<pre><code>
+    #include &lt;iostream&gt;
+    #include &lt;stdio.h&gt;
+    #include &lt;stdlib.h&gt;
+
+    using namespace std;
+
+    string GetStdoutFromCommand(string cmd) {
+
+    string data;
+    FILE * stream;
+    const int max_buffer = 256;
+    char buffer[max_buffer];
+    cmd.append(&quot; 2&gt;&amp;1&quot;);
+
+    stream = popen(cmd.c_str(), &quot;r&quot;);
+    if (stream) {
+    while (!feof(stream))
+    if (fgets(buffer, max_buffer, stream) != NULL) data.append(buffer);
+    pclose(stream);
+    }
+    return data;
+    }
+
+    int main (){
+
+    string ls = GetStdoutFromCommand(&quot;ls -la&quot;);
+
+    cout &lt;&lt; &quot;LS: &quot; &lt;&lt; ls &lt;&lt; endl;
+
+    return 0;
+    }
+
+</code></pre><p>Like I said this a pretty obscure tutorial but I figured if I had this problem, others might as well so I thought I&rsquo;d throw it up there. I hope it helps.</p>
+<p>Happy Coding!</p>
+
+<br />
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	 
+</style>
+<div id="mc_embed_signup">
+<form action="https://jeremymorgan.us12.list-manage.com/subscribe/post?u=5e52fc440f04a3aabd4a1b06b&amp;id=e02bf01fbc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Want to be notified every time a new tutorial is posted?</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e52fc440f04a3aabd4a1b06b_e02bf01fbc" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
