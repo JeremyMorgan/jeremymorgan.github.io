@@ -3,118 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jeremymorgan.github.io/tutorials/linux/tutorials/linux/install-hugo-popos/</loc>
-    <lastmod>2020-03-03T00:00:00+00:00</lastmod>
+    <loc>https://jeremymorgan.github.io/projects/hello-world/</loc>
+    <lastmod>2020-04-24T18:51:18-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://jeremymorgan.github.io/</loc>
-    <lastmod>2020-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-24T18:51:18-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jeremymorgan.github.io/tutorials/</loc>
-    <lastmod>2020-03-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/tutorials/freebsd/tutorials/freebsd/create-static-blog-hugo-freebsd/</loc>
-    <lastmod>2020-02-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/</loc>
-    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/programming/blog/programming/whiteboard-interview-tips/</loc>
-    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/freebsd/freebsd-developer-2020/</loc>
-    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/tutorials/linux/tutorials/linux/getting-started-windows-subsystem-linux/</loc>
-    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/programming/how-to-learn-react/</loc>
-    <lastmod>2020-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/</loc>
-    <lastmod>2020-02-02T10:44:03-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/posts/hello-world/</loc>
-    <lastmod>2020-02-02T10:14:25-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/posts/</loc>
-    <lastmod>2020-02-02T10:14:25-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/linux/pop-os-linux-review/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/linux/analyzing-linux-attacks/</loc>
-    <lastmod>2020-01-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/linux/blog/linux/pine64-pro-laptop-review/</loc>
-    <lastmod>2020-01-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/programming/blog/programming/tools-csv-text-nimbletext/</loc>
-    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/blazor/blazor/what-is-blazor/</loc>
-    <lastmod>2019-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/programming/blog/programming/how-to-dapper-web-api/</loc>
-    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/tutorials/raspberry-pi/tutorials/freebsd/create-static-blog-hugo-freebsd/</loc>
-    <lastmod>2015-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/tutorials/c-programming/how-to-capture-the-output-of-a-linux-command-in-c/</loc>
-    <lastmod>2011-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/</loc>
-    <lastmod>2008-08-05T17:43:41+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/programming/blog/programming/how-to-start-programming-for-free/</loc>
-    <lastmod>2007-12-27T13:29:51+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jeremymorgan.github.io/blog/programming/blog/programming/my-huge-rpc-ping-list/</loc>
-    <lastmod>2007-12-27T13:29:51+00:00</lastmod>
+    <loc>https://jeremymorgan.github.io/projects/</loc>
+    <lastmod>2020-04-24T18:51:18-07:00</lastmod>
   </url>
   
   <url>

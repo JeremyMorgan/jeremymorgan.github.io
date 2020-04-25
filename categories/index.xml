@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Jeremy Morgan :: Tech Blog</title>
+    <title>Categories on Let&#39;s Party Like it&#39;s 1992</title>
     <link>https://jeremymorgan.github.io/categories/</link>
-    <description>Recent content in Categories on Jeremy Morgan :: Tech Blog</description>
+    <description>Recent content in Categories on Let&#39;s Party Like it&#39;s 1992</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Jeremy Morgan</copyright>
     
 	<atom:link href="https://jeremymorgan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     

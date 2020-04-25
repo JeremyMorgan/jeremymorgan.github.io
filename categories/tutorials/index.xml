@@ -1,26 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tutorials on Jeremy Morgan :: Tech Blog</title>
-    <link>https://jeremymorgan.github.io/categories/tutorials/</link>
-    <description>Recent content in Tutorials on Jeremy Morgan :: Tech Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Jeremy Morgan</copyright>
-    <lastBuildDate>Tue, 05 Aug 2008 17:43:41 +0000</lastBuildDate>
-    
-	<atom:link href="https://jeremymorgan.github.io/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Tutorials: How to work with arrays in PHP</title>
-      <link>https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/</link>
-      <pubDate>Tue, 05 Aug 2008 17:43:41 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/</guid>
-      <description>What is an array? Arrays are common to almost every programming language. An array is simply an ordered map of values, indexed so you can find these values, called elements. These elements can be of multiple datatypes, and can be ordered any way you want.
-Array([a] =&amp;gt; 1[b] =&amp;gt; 2[c] =&amp;gt; 3)The Two types of arrays in PHP There are two types of arrays in PHP, associative and enumerative.</description>
-    </item>
-    
-  </channel>
-</rss>
