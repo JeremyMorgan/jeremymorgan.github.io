@@ -1,97 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Jeremy Morgan :: Tech Blog</title>
+    <title>Categories on Let&#39;s Party Like it&#39;s 1992</title>
     <link>https://jeremymorgan.github.io/categories/</link>
-    <description>Recent content in Categories on Jeremy Morgan :: Tech Blog</description>
+    <description>Recent content in Categories on Let&#39;s Party Like it&#39;s 1992</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Jeremy Morgan</copyright>
-    <lastBuildDate>Tue, 05 Aug 2008 17:43:41 +0000</lastBuildDate>
     
 	<atom:link href="https://jeremymorgan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>PHP</title>
-      <link>https://jeremymorgan.github.io/categories/php/</link>
-      <pubDate>Tue, 05 Aug 2008 17:43:41 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>https://jeremymorgan.github.io/categories/programming/</link>
-      <pubDate>Tue, 05 Aug 2008 17:43:41 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorials</title>
-      <link>https://jeremymorgan.github.io/categories/tutorials/</link>
-      <pubDate>Tue, 05 Aug 2008 17:43:41 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/tutorials/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dotnet</title>
-      <link>https://jeremymorgan.github.io/categories/dotnet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/dotnet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>FreeBSD</title>
-      <link>https://jeremymorgan.github.io/categories/freebsd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/freebsd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://jeremymorgan.github.io/categories/linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pop!_OS</title>
-      <link>https://jeremymorgan.github.io/categories/pop_os/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/pop_os/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Raspberry Pi</title>
-      <link>https://jeremymorgan.github.io/categories/raspberry-pi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>https://jeremymorgan.github.io/categories/react/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/categories/react/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

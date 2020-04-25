@@ -1,36 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tutorials on Jeremy Morgan :: Tech Blog</title>
-    <link>https://jeremymorgan.github.io/tutorials/</link>
-    <description>Recent content in Tutorials on Jeremy Morgan :: Tech Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Jeremy Morgan</copyright>
-    <lastBuildDate>Sun, 02 Feb 2020 10:44:03 -0800</lastBuildDate>
-    
-	<atom:link href="https://jeremymorgan.github.io/tutorials/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Raspberry Pi 4 Dev Server</title>
-      <link>https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/</link>
-      <pubDate>Sun, 02 Feb 2020 10:44:03 -0800</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/tutorials/raspberry-pi/raspberry-pi-4-dev-server/</guid>
-      <description>In this tutorial, I will show you how to set up a Raspberry Pi 4 as a development (or testing) server. You can use this as a place to push your code and test it in a web browser. For the demo, I&#39;ll use a React application, but with a few modifications, you can build just about anything with it.
-For this project, I&#39;m using a Canakit Raspberry Pi 4 Complete Kit.</description>
-    </item>
-    
-    <item>
-      <title>Tutorials: How to work with arrays in PHP</title>
-      <link>https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/</link>
-      <pubDate>Tue, 05 Aug 2008 17:43:41 +0000</pubDate>
-      
-      <guid>https://jeremymorgan.github.io/tutorials/php-tutorials/how-to-work-with-arrays-in-php/</guid>
-      <description>What is an array? Arrays are common to almost every programming language. An array is simply an ordered map of values, indexed so you can find these values, called elements. These elements can be of multiple datatypes, and can be ordered any way you want.
-Array([a] =&amp;gt; 1[b] =&amp;gt; 2[c] =&amp;gt; 3)The Two types of arrays in PHP There are two types of arrays in PHP, associative and enumerative.</description>
-    </item>
-    
-  </channel>
-</rss>
